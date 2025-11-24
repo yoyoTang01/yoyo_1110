@@ -19,8 +19,36 @@
     } 
     span {
        color:red;
-       text-decoration: overline underline;
-         
+       text-decoration: overline underline; 
+    }
+    #cat {
+         width:200px;
+         position:absolute;
+         top:0;
+         right:0;
+         z-index:5;
+    }
+    #cat1 {
+         width:200px;
+         position:absolute;
+         top:0;
+         right:100px;
+         z-index:2;
+    }
+    #box {
+         width:700px;
+         height:700px;
+         background-color:lightgreen;
+    }
+    #cat3 {
+         position:relative;
+         top:0;
+         left:0px;
+    }
+   #cat2 {
+         position:relative;
+         top:0;
+         left:200px;
     }
     </style>
 </head>
@@ -46,8 +74,16 @@
 
     <p class="p1">步驟三、將 cafe_townsend 資料夾複製到 local_sites 資料夾中。 cafe_townsend 資料夾將用來當作 Dreamweaver 網站的根資料夾 (主要資料夾)。</p>
 
+   <h2>絕對定位</h2>
 
+      <img id="cat" src="https://www.bing.com/th/id/OIP.12xx4Ak9BxVTvvTR_LJwCgHaHa?w=200&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="" >
+      <img id="cat1" src="https://www.bing.com/th/id/OIP.U_AR9z1FZUbMhaikeFEVaAHaHa?w=200&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="">
 
+   <h2>相對定位</h2>
 
+      <div id="box">
+         <img id="cat3" src="https://www.bing.com/th/id/OIP.12xx4Ak9BxVTvvTR_LJwCgHaHa?w=200&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="">
+         <img id="cat2" src="https://www.bing.com/th/id/OIP.1E2uPdWprrqMH39OUUPqdwHaHa?w=200&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="">
+      </div>
 </body>
 </html>
