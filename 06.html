@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        //alert 是一個用來顯示彈出視窗的函式
+        //alert("Hello word!");
+        console.log('Hello console!');
+        console.log(2+4*5-6/8*9);
+
+        //使用document.write 方法寫入一個標題
+        document.write('<h2>Welcome to Javascript world!</h2>');
+
+        //全域變數
+        //var x = 2;
+
+        //區域變數
+        let x = 2;
+        let y = 5;
+
+        console.log(x*x + 1);
+
+        x = 3;
+
+        console.log(x*x + 1);
+
+        x = 4;
+
+        console.log(x*x + y + 1);
+
+        hello();
+
+        function hello() {
+            let x = 100;
+            console.log(x);
+        }
+
+        console.log(x);
+
+        hello();
+
+
+    </script>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <p id="test">我是測試用的段落</p>
+
+    <h2>變數</h2>
+
+    變數是用來儲存資料的容器，可以用來存放數字、文字、布林值等各種資料型態<br>
+    在Javascript 中，可以使用var、let、const 關鍵字來宣告變數<br>
+
+    <script>
+        //再次使用alert 函式顯示訊息
+        //alert("I'm Javascript!");
+
+        document.write('<h2 style="color:red;"> Welcome to Javascript world! again!!!</h2>');
+
+        document.getElementByTagName('h1')[0].style.color = 'yellow';
+
+        //動態修改id 為test的段落文字顏色為藍色
+        document.getElementById('test').style.color = 'blue';    
+    </script>
+</body>
+</html>
