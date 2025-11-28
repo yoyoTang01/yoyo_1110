@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>第8堂</h1>
+    <h2>Switch 判斷式</h2>
+    <p>Switch判斷是用來根據不同的條件執行不同的程式碼區塊，通常用於多重選擇的情況</p>
+    <pre>
+        switch(表達式) {
+            Case 值1：
+                //當表達式等於值1時執行的程式碼
+                break;
+            Case 值2：
+                //當表達式等於值2時執行的程式碼
+                break;
+            Case 值3：
+                //當表達式等於值3時執行的程式碼
+            default:
+                //當表達式不符合任何情況時執行的程式碼
+         }
+    </pre>
+    <!--下拉式選單-->
+    <select id="myday" onchange="showDayMessage()">
+        <option value="">請選擇日期</option>
+        <option value="0">星期日</option>
+        <option value="1">星期一</option>
+        <option value="2">星期二</option>
+        <option value="3">星期三</option>
+        <option value="4">星期四</option>
+        <option value="5">星期五</option>
+        <option value="6">星期六</option>
+    </select>
+    <script>
+        function showDayMessage() {
+            //alert(我被觸發了);
+            let day = document.getElementById("myday").value;
+            //alert("day=" +day);
+
+       
+            switch (day) {
+                case "0":
+                    alert("今天是星期日，放假囉!");
+                    break;
+                case "1":
+                    alert("今天是星期一，放假囉!");
+                    break;
+                case "2":
+                    alert("今天是星期二，放假囉!");
+                    break;
+                case "3":
+                    alert("今天是星期三，放假囉!");
+                    break;
+                case "4":
+                    alert("今天是星期四，放假囉!");
+                    break;
+                case "5":
+                    alert("今天是星期五，放假囉!");
+                    break;
+                case "6":
+                    alert("今天是星期六，放假囉!");
+                    break;
+                //default:
+                //     alert("請選擇有效的日期");
+
+            }
+             }
+    </script>
+    
+    <h2>迴圈</h2>
+    <p>迴圈用來重複執行一段程式碼，直到特定條件不再符合為止</p>
+    <h3>for迴圈</h3>
+    <pre>
+        for(初始化計數器; 執行條件; 布進值) {
+        //重複執行的程式碼
+        }
+    </pre>
+    <select name="" id="year">
+        <option value="">請選擇年份</option>
+    </select>
+    
+    <script>
+        for(let i = 1; i < = 1000; i++) {
+            console.log("i =", i);
+        }
+        //let year = 2025;
+        //將年份改為自動取得當前年份
+        let year = new Date().getFullYear();
+        year -=120;
+        for (let i = 1; i <= 120; i++) {
+            //建立一個option元素
+            let option = document.createElement("option");
+            //設定 option 元素的 value屬性與顯示的文字
+            option.value = year + i;
+            option.text = year + i;
+            //將上面所產生的option元素，加入到下拉式選單中
+            document.getElementById("year").appendChild(option);
+        }
+    </script>
+
+
+    <h3>for/in</h3>
+    <p>針對陣列的項目作處理</p>
+    <pre>
+        for(變數 in 陣列物件) {
+            //重複執行的程式碼
+        }
+    </pre>
+    <script>
+        let cars = ["BMW", "volvo", "saab", "Ford", "Fiat", "Audi"];
+        console.log(cars.join());
+        for(let i in cars) {
+            console.log("廠牌 =", cars[i]);
+        }
+    </script>
+    <h3>wile迴圈</h3>
+    <pre>
+        wile(執行的條件) {
+            //重複執行的程式碼
+        }
+    </pre>
+    <p id="msg01"></p>
+    <script>
+        let n = 0;
+        while(n<10) {
+            document.getElementById("msg01").innerHTML += "n 的值是 " + n + "<br>";
+            n++;
+        }
+    </script>
+
+    <p id="msg02"></p>
+    <script>
+        //取得亂數 Math.random() 產生 0~1之間的亂數
+        let a = Math.random();
+        while(a < 10) {
+            document.getElementById("msg02").innerHTML += "a 的值是 " + a + "<br>";
+            a++;
+        }
+    </script>
+
+    <p id="msg03"></p>
+    <script>
+        //取得亂數 Math.random() 產生 0~1之間的亂數
+        //如果要取得 1~10之間的亂數，可以這樣寫：
+        //let b = Math.floor(Math.random()*10) + 1;
+        let b = Math.floor(Math.random()*10) + 1;
+        while(b < 10) {
+            document.getElementById("msg03").innerHTML += "b 的值是 " + b + "<br>";
+            b++;
+        }
+    </script>
+
+    <p id="msg04"></p>
+    <script>
+        //取得亂數 Math.random() 產生 0~1之間的亂數
+        //如果要取得 1~10之間的亂數，可以這樣寫：
+        let c = 0;
+        while(c < 10) {
+            //c = Math.floor(Math.random()*10) + 1;
+            c = Math.floor(Math.random()*10) + 1;
+            document.getElementById("msg04").innerHTML += "c 的值是 " + c + "<br>";
+            c++;
+        }
+    </script>
+
+    <h3>Do while迴圈</h3>
+    <p>無論如何一定最少會跑一次</p>
+    <pre>
+        do {
+            //重複執行的程式碼
+        } while (執行的條件);
+    </pre>
+        <p id="msg05"></p>
+    <script>
+        let m = 0;
+        do {
+            m = Math.floor(Math.random() * 11);
+            document.getElementById("msg05").innerHTML += "m 的值是 " + m + "<br>";
+            } while(m > 0)
+    </script>
+   
+   <h3>brack 與 continue</h3>
+   <pre>
+
+
+   </pre>
+   <script>
+    for(let k = 0; k < 10; k++) {
+        if(k==5) {
+            continue; //當 i 等於 5 時跳出迴圈
+        }
+        console.log("break k =",k);
+    }
+   </script>
+   
+   <h2>其他</h2>
+   <h3>type of</h3>
+   <p>type of 運算子用來檢查變數或表達式的資料類型。</p>
+   <script>
+        let x = new Date().getDate();
+        console.log("x的資料類型是" + type of x);
+   </script>
+</body>
+
+</html>
