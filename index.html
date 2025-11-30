@@ -7,18 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>歡迎來到 Yoyo的新手網站</title>
     <style>
-         #catlog {
-            
-            width:450px;
-            height:450px;
-            margin:auto;
-            background-color:yellow;
-            border-radius:50%;
-            text-align:center;
-            justify-content:center;
-
+        body {
+            background-color:rgb(250, 226, 189);
         }
-   
+        h1 {
+            padding:50px 0 50px 100px;
+            
+        }
+        #catlog {
+            width:350px;
+            height: 350px;
+            margin:auto;
+            padding:50px;
+            background-color:rgb(142, 247, 182);
+            border-radius:50%;
+            justify-content:center;
+            text-align:center;
+            position: relative;
+            z-index:-1;           
+        }
+        #demo {
+            display:flex;
+            width:300px;
+            height:300px;
+            margin:-100px 600px 70px auto;
+            padding:20px;
+            background-color:rgb(100, 185, 255);
+            border-radius:50%;
+            justify-content:center;
+            text-align:center;
+            z-index:0;
+                      
+        }
+        main {
+            width:60%;
+            margin:auto;
+            padding-top:40px;
+        }
     </style>
 </head>
 <body>
@@ -30,8 +55,8 @@
         <h2>第4課 使用 CSS 美化網頁</h2>
         <h2>第5課 Javascript 入門</h2>
     </div>
-    <div id="homework">  
-        <h2>作業區</h2>
+    <div id="demo">  
+        <h2>展示區</h2>
         <ul>
             <li><a href="web01/index.html">web01</a></li>
             <li><a href="web02/index.html">web02</a></li>
@@ -45,7 +70,7 @@
             <li><a href="web10/index.html">web10</a></li>
         </ul>
     </div>
-
+<main>
     <div>
     <h2>第1課 認識網站</h2>
     <h3>了解網頁的組成</h3>
@@ -56,11 +81,13 @@
         <li>Server Script</li>
         <li>DataBase</li>
     </ul>
+    <hr>
     <p>HTML 文件主要藉由標記 (tags) 來標示文件中 語法的開始與結束。除了&ltbr&lg、&lthr&lg、&ltimg&lg 等標記之外，大部分的標記都是成雙成對， 分別宣告該語法的開始與結束，在使用上並無大小寫之分。</p>
     <p>CSS主要是為了加強網頁上的排版效果，它可用來定義 HTML 網頁上物件的大 小、顏色、位置與間距，甚至是為文字、圖片加 上陰影等等功能。</p>
     <p>JavaScript 被設計為向 HTML 頁面增加交互性。使用 jQuery 函式庫可以極大地簡化了 JavaScript 編程。</p>
     <p>PHP 是一種伺服端描述語言，用來製作動態網頁。它是開放原始碼 (Open Source) 而且是跨平台的。</p>
     <p>所謂資料庫管理系統 (Database Management System, 簡稱為 DBMS)，它是透過一組程式模組來組織、管理、儲存和讀取資料庫的資料，任何使用者在操作資料庫時，都需要透過資料庫管理系統來處理。</p>
+    <hr>
     <h3>軟體環境與安裝</h3>
         <ul>
             <li>下載並安裝Visual Studio Code並安裝</li>
@@ -73,8 +100,7 @@
             <li>介面左方點選左方的「Extensions」輸入「chinese」後點選「Chinese (Traditional) Language Pack」安裝擴充語系。安裝完畢後點選「Restart Now」重啟 VSCode。</li>
         </ul>
     </div>
-    
-
+    <hr>
     <p>通常只會使用到標題三，因為標題四跟段落的文字一樣大</p>
     <h3>條例式的段落</h3>
     
@@ -92,13 +118,14 @@
         <li>攝影捕捉美好瞬間</li>
         <li>運動保持健康</li>
     </ul>
+    <hr>
     <h2>第二堂 結構及語法基礎</h2>
     <h3>創建水平線&lthr&gt</h3>
-    <h3>&ltimg src="url" width ="寬" height ="高" />&gt</h3>
+    <h3>&lt; img src="url" width ="寬" height ="高" &gt;</h3>
     <h3>float: 方向;</h3>/* left 右浮動  right 左浮動 */
     <h3>clear: both;</h3>/* 清除浮動效果 */
-    <h3>超連結<a href="#">連結名稱</a></h3>
-
+    <h3>超連結 &lt;a href="#"&gt;連結名稱&lt;/a&gt;</h3>
+</main>
     
 </body>
 </html>
