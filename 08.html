@@ -88,6 +88,23 @@
         for(let i = 1; i <= 1000; i++) {
             console.log("i =", i);
         }
+        let year = 2025;
+        let year = new Date().getFullYear();
+        year -=120;
+        for (let i = 1; i <= 120; i++) {
+            //建立一個option元素
+            let option = document.createElement("option");
+            //設定 option 元素的 value屬性與顯示的文字
+            option.value = year + i;
+            option.text = year + i;
+            //將上面所產生的option元素，加入到下拉式選單中
+            document.getElementById("year").appendChild(option);
+        }
+    </script>
+    <script>
+        for(let i = 1; i <= 1000; i++) {
+            console.log("i =", i);
+        }
         //let year = 2025;
         //將年份改為自動取得當前年份
         let year = new Date().getFullYear();
@@ -103,7 +120,6 @@
         }
     </script>
 
-
     <h3>for/in</h3>
     <p>針對陣列的項目作處理</p>
     <pre>
@@ -111,6 +127,13 @@
             //重複執行的程式碼
         }
     </pre>
+    <script>
+        let cars = ["BMW", "volvo", "saab", "Ford"];
+        console.log(cars.join());
+        for(let i in cars) {
+            console.log("廠牌 =", cars[i]);
+        }
+    </script>
     <script>
         let cars = ["BMW", "volvo", "saab", "Ford", "Fiat", "Audi"];
         console.log(cars.join());
