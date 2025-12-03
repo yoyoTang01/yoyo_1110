@@ -147,6 +147,20 @@
             //重複執行的程式碼
         }
     </pre>
+    輸入密碼：
+    <input type="text" name="" id="pw">
+    <button onclick="checkpw()">送出</button>
+    <script>
+        function checkpw() {
+            let password = "";
+            while(password != "1234") {
+                password = document.getElementById("pw").value;
+                if(password != "1234") {
+                    alert("密碼錯誤，請重新輸入");
+                    return; //離開函式，避免無限迴圈
+        }
+        alert("密碼正確，歡迎進入系統");
+    </script>
     <p id="msg01"></p>
     <script>
         let n = 0;
