@@ -94,7 +94,7 @@
         }
     </script>-->
     <script>
-        for(let i = 1; i <= 1000; i++){
+        for(let i = 1; i < = 1000; i++) {
             console.log("i =", i);
         }
         let year = 2025;
@@ -118,6 +118,13 @@
     </pre>
     <script>
         let cars = ["BMW", "volvo", "saab", "Ford"];
+        console.log(cars.join());
+        for(let i in cars) {
+            console.log("廠牌 =", cars[i]);
+        }
+    </script>
+    <script>
+        let cars = ["BMW", "volvo", "saab", "Ford"];
         //console.log(cars[0], cars[1], cars[2],cars[3]);
           console.log(cars.join());
         
@@ -132,23 +139,7 @@
             //重複執行的程式碼
         }
     </pre>
-    <!--輸入密碼：<input type="text" name="" id="pw">
-    <button onclick="checkPW()" id="send">送出</button>
-    <script>
-        function checkPW() {
-            let password = "";
-            while(password != "1234") {
-                password = document.getElementById("pw").value;
-                if(password != "1234") {
-                    alert("密碼錯誤，請重新輸入");
-                    return;//離開函式，避免無限迴圈
-                }
-            }
-            alert("密碼正確，歡迎進入系統");
-            document.getElementById("send").style.display = "none";
-        }
-    </script>-->
-    <p id ="msg01"></p>
+    <p id="msg01"></p>
     <script>
         let n = 0;
         while(n < 10) {
