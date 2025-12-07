@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,8 @@
                 //當表達式不符合任何情況時執行的程式碼
          }
     </pre>
+
+
     <!--下拉式選單-->
     <select id="myday" onchange="showDayMessage()">
         <option value="">請選擇日期</option>
@@ -36,13 +38,16 @@
         <option value="5">星期五</option>
         <option value="6">星期六</option>
     </select>
+        <!--<script>
+        var day = new.Date().getDay();
+        console.log("day=", day);
+    </script>-->
     <script>
         function showDayMessage() {
-            //alert(我被觸發了);
+            //alert("我被觸發了");
             let day = document.getElementById("myday").value;
-            //alert("day=" +day);
+            //alert("day=" + day);
 
-       
             switch (day) {
                 case "0":
                     alert("今天是星期日，放假囉!");
@@ -69,70 +74,88 @@
                 //     alert("請選擇有效的日期");
 
             }
-             }
+        }
     </script>
     
     <h2>迴圈</h2>
     <p>迴圈用來重複執行一段程式碼，直到特定條件不再符合為止</p>
     <h3>for迴圈</h3>
     <pre>
-        for(初始化計數器; 執行條件; 布進值) {
+        for(初始化; 執行條件; 步進值) {
         //重複執行的程式碼
         }
     </pre>
     <select name="" id="year">
         <option value="">請選擇年份</option>
     </select>
-    
-    <script>
-        for(let i = 1; i < = 1000; i++) {
+    <!--<script>
+        for(let i = 0; i < 10; i++){
             console.log("i =", i);
         }
-        //let year = 2025;
-        //將年份改為自動取得當前年份
-        let year = new Date().getFullYear();
+    </script>-->
+    <script>
+        for(let i = 1; i <= 1000; i++){
+            console.log("i =", i);
+        }
+        let year = 2025;
         year -=120;
-        for (let i = 1; i <= 120; i++) {
+        for(let i = 1; i <= 120; i++){
             //建立一個option元素
             let option = document.createElement("option");
-            //設定 option 元素的 value屬性與顯示的文字
             option.value = year + i;
             option.text = year + i;
-            //將上面所產生的option元素，加入到下拉式選單中
+            //將上面所產生的option 元素，加入到下拉式選單中
             document.getElementById("year").appendChild(option);
         }
     </script>
 
-
     <h3>for/in</h3>
-    <p>針對陣列的項目作處理</p>
+    <p>針對陣列的項目做處理</p>
     <pre>
         for(變數 in 陣列物件) {
             //重複執行的程式碼
         }
     </pre>
     <script>
-        let cars = ["BMW", "volvo", "saab", "Ford", "Fiat", "Audi"];
-        console.log(cars.join());
+        let cars = ["BMW", "volvo", "saab", "Ford"];
+        //console.log(cars[0], cars[1], cars[2],cars[3]);
+          console.log(cars.join());
+        
         for(let i in cars) {
-            console.log("廠牌 =", cars[i]);
+            console.log("廠牌", cars[i]);
         }
+        document.write(text);
     </script>
-    <h3>wile迴圈</h3>
+    <h3>while迴圈</h3>
     <pre>
-        wile(執行的條件) {
+        while(執行的條件) {
             //重複執行的程式碼
         }
     </pre>
-    <p id="msg01"></p>
+    <!--輸入密碼：<input type="text" name="" id="pw">
+    <button onclick="checkPW()" id="send">送出</button>
+    <script>
+        function checkPW() {
+            let password = "";
+            while(password != "1234") {
+                password = document.getElementById("pw").value;
+                if(password != "1234") {
+                    alert("密碼錯誤，請重新輸入");
+                    return;//離開函式，避免無限迴圈
+                }
+            }
+            alert("密碼正確，歡迎進入系統");
+            document.getElementById("send").style.display = "none";
+        }
+    </script>-->
+    <p id ="msg01"></p>
     <script>
         let n = 0;
-        while(n<10) {
-            document.getElementById("msg01").innerHTML += "n 的值是 " + n + "<br>";
+        while(n < 10) {
+            document.getElementById("msg01").innerHTML  += " n的值是 " + n + "<br>";
             n++;
-        }
+        }   
     </script>
-
     <p id="msg02"></p>
     <script>
         //取得亂數 Math.random() 產生 0~1之間的亂數
@@ -142,57 +165,91 @@
             a++;
         }
     </script>
-
     <p id="msg03"></p>
     <script>
         //取得亂數 Math.random() 產生 0~1之間的亂數
         //如果要取得 1~10之間的亂數，可以這樣寫：
-        //let b = Math.floor(Math.random()*10) + 1;
-        let b = Math.floor(Math.random()*10) + 1;
-        while(b < 10) {
-            document.getElementById("msg03").innerHTML += "b 的值是 " + b + "<br>";
-            b++;
+        //let o = Math.floor(Math.random()*10) + 1;
+        let o = Math.floor(Math.random()*10) + 1;
+        while(o < 10) {
+            document.getElementById("msg03").innerHTML += "o 的值是 " + o + "<br>";
+            o++;
         }
+        //亂數會變成整數，小於10，跑到9，固定的數字
     </script>
-
+    <script>
+        //取得亂數 Math.random() 產生 0~1之間的亂數
+        //如果要取得 1~10之間的亂數，可以這樣寫：
+        let p = 0;
+        while(p < 10) {
+            //p = Math.floor(Math.random()*10) + 1;
+            p = Math.floor(Math.random()*10) + 1;
+            document.getElementById("msg03").innerHTML += "p 的值是 " + p + "<br>";
+            }
+    </script>
+    <!--一旦跑成10，就脫離這個條件-->
+     <script>
+        //取得亂數 Math.random() 產生 0~1之間的亂數
+        //如果要取得 1~10之間的亂數，可以這樣寫：
+        let r = 0;
+        while(r < 10) {
+            //r = Math.floor(Math.random()*20) + 1;
+            r = Math.floor(Math.random()*20) + 1;
+            document.getElementById("msg03").innerHTML += "r 的值是 " + r + "<br>";
+            }
+            //大於10一次就會跳出去
+    </script>
+    <!--若改大於0才跑就會一次都不跑，如果一定要改一次，用do while迴圈-->
+    <h3>do while迴圈</h3>
+    <p>無論如何至少會跑一次</p>
+    <pre>
+        do { 
+            //重複執行的程式碼
+        }while (執行的條件);
+    </pre>
     <p id="msg04"></p>
     <script>
         //取得亂數 Math.random() 產生 0~1之間的亂數
         //如果要取得 1~10之間的亂數，可以這樣寫：
         let c = 0;
-        while(c < 10) {
-            //c = Math.floor(Math.random()*10) + 1;
-            c = Math.floor(Math.random()*10) + 1;
+        do {
+            c = Math.floor(Math.random() * 11);
             document.getElementById("msg04").innerHTML += "c 的值是 " + c + "<br>";
-            c++;
-        }
+        } while(c > 0) 
+        //判斷亂數讀到0就停下來
     </script>
-
-    <h3>Do while迴圈</h3>
-    <p>無論如何一定最少會跑一次</p>
-    <pre>
-        do {
-            //重複執行的程式碼
-        } while (執行的條件);
-    </pre>
-        <p id="msg05"></p>
-    <script>
-        let m = 0;
-        do {
-            m = Math.floor(Math.random() * 11);
-            document.getElementById("msg05").innerHTML += "m 的值是 " + m + "<br>";
-            } while(m > 0)
-    </script>
-   
    <h3>brack 與 continue</h3>
+   <p>break 語句可用於跳出迴圈，並會繼續執行該迴圈之後的代碼</p>
+   <p>continue 語句可以中斷迴圈中的本次代碼，如果出現了指定的條件，然後繼續迴圈中的下一次代碼。</p>
    <pre>
+        //break用來跳出迴圈
+        for(let i = 0; i < 10; i++) {
+            if(i == 5) {
+                break; //當 i 等於 5 時跳出迴圈
+            }
+            //其他程式碼
+        }
 
-
+        // continue 用來跳過本次迴圈，進入下一次迴圈
+        for (let i = 0; i < 10; i++) {
+            if (1 % 2 == 0) {
+                continue; //當 i 為偶數時，跳過本次迴圈
+            }
+            //其他程式碼
+        }
    </pre>
+   <script>
+    for (let j = 0; j < 10; j++) {
+        if (j == 5) {
+            break;//當 j 等於 5 時跳出迴圈
+        }
+        console.log("break j =", j);
+    }
+   </script>
    <script>
     for(let k = 0; k < 10; k++) {
         if(k==5) {
-            continue; //當 i 等於 5 時跳出迴圈
+            continue; //當 k 等於 5 時跳出迴圈，再進來迴圈繼續跑
         }
         console.log("break k =",k);
     }
@@ -202,8 +259,26 @@
    <h3>type of</h3>
    <p>type of 運算子用來檢查變數或表達式的資料類型。</p>
    <script>
-        let x = new Date().getDate();
-        console.log("x的資料類型是" + type of x);
+        let x = 1234; /*12.34 小數點也是一個number*/
+        console.log("x的資料類型是" + typeof x);
+   </script>
+   <script>
+        let w = '1234';
+        console.log("w的資料類型是" + typeof w);
+   </script>
+   <p>Boolean (布林)在中文里通常指计算机科学中的逻辑数据类型，其值只有兩種可能：真(True) 或 假(False)，用來表示判斷結果或控制程式流程，得名自數學家喬治·布爾(George Boole)。</p>
+   <p>布林值(Boolean Value)： 就是 True 或 False，例如 2 <= 3 的結果是 True，而 0 == 1 的結果是 False。 </p>
+   <script>
+        let d = true;
+        console.log("d的資料類型是" + typeof d);
+   </script>
+   <script>
+        let e = new Date(); //object是物件
+        console.log("e的資料類型是" + typeof e);
+   </script>
+   <script>
+        let f = new Date().getDate(); //把物件裡面的數值抓出來
+        console.log("f的資料類型是" + typeof f);
    </script>
 </body>
 
