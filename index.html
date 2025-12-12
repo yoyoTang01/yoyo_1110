@@ -44,6 +44,41 @@
             margin:auto;
             padding-top:40px;
         }
+            /* 手機板樣式 */
+            @media (max-width: 600px) {
+                body { background-color: rgb(250,226,189); }
+                h1 { padding:30px 10px; font-size:1.4rem; text-align:center; }
+                #catlog {
+                    width:240px;
+                    height:240px;
+                    margin:20px auto;
+                    padding:30px 20px;
+                    border-radius:20px;
+                    display:block;
+                    position:static;
+                    z-index:0;
+                }
+                #demo {
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    width:90%;
+                    height:auto;
+                    margin:20px auto;
+                    padding:15px;
+                    border-radius:12px;
+                }
+                #demo ul { padding-left: 20px; margin: 10px 0; }
+                main { width:95%; padding-top:20px; }
+                h2 { font-size:1.1rem; }
+                h3, p, li { font-size:0.95rem; line-height:1.5; }
+            }
+
+            @media (max-width: 400px) {
+                #catlog { width:200px; height:200px; padding:20px; }
+                h1 { padding:20px 8px; font-size:1.1rem; }
+                #demo { width:95%; padding:12px; }
+            }
     </style>
 </head>
 <body>
