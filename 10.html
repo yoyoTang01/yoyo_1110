@@ -3,27 +3,196 @@
 <html lang="en">
 
 <head>
-    
+
   <meta charset="UTF-8">
-    
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
   <title>RWD Bootstrap 5</title>
-    
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
 
 <body>
-    
-  <h1 class="text-success" text-end>Bootstrap 5</h1>
+  <section id="teacher">
+    <div class="container">
+      <h1 class="text-primary">Bootstrap 5</h1>
+      <h1 class="text-danger text-center display-1">Bootstrap 5</h1>
+      <h1 class="text-success text-end h3">Bootstrap 5</h1>
+      <h2>斷點</h2>
+      <ul>
+        <li>xs(預設): 超小螢幕(手機直向) 小於 576px </li>
+        <li>sm :小螢幕(手機橫向)大於等於576px</li>
+        <li>md :中螢幕(平板直向)大於等於768px</li>
+        <li>lg :大螢幕(平板橫向小筆電)大於等於992px</li>
+        <li>xl :超大螢幕(一般筆電)大於等於1200px</li>
+        <li>xxl :特大螢幕(大型桌機)大於等於1400px</li>
+      </ul>
+      <h2>容器內</h2>
+      <ul>
+        <li>.container:固定寬度容器，會隨斷點改變寬度</li><span>"稍微置中"</span>
+        <li>.container-fluld:滿版寬度容器，寬度100%</li> <span>"靠左上"</span>
+      </ul>
+      <h2>網格系統</h2> <!--網格要在container裡面-->
+      <p>Bootstrap使用12欄的彈性網格系統，可以透過設定不同斷點的欄位數來達到響應式布局。</p>
+      <h3>範例</h3><span>"直接呼叫類別會自動產生DIV的標籤 EX:[.row]"</span>
+      <p>"網格-列&lt;div class="row"&gt;"</p>
+      <p>&quot;網格-欄 &lt;div class="col"&gt;&quot;</p>
+      <div class="row">
+        <div class="col-1" style="background-color:aqua;">a</div>
+        <div class="col-1" style="background-color:rgb(192,152,240);">b</div>
+        <div class="col-1" style="background-color:aqua;">c</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">d</div>
+        <div class="col-1" style="background-color:aqua;">e</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">f</div>
+        <div class="col-1" style="background-color:aqua;">g</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">h</div>
+        <div class="col-1" style="background-color:aqua;">i</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">j</div>
+        <div class="col-1" style="background-color:aqua;">k</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">l</div>
+      </div>
+      <div class="row"> <span>以手機當範本，第二格原col-1改col-2後，已滿格12格計算，多的往下擠</span>
+        <div class="col-1" style="background-color:aqua;">a</div>
+        <div class="col-2" style="background-color:rgb(192,152,240);">b</div>
+        <div class="col-1" style="background-color:aqua;">c</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">d</div>
+        <div class="col-1" style="background-color:aqua;">e</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">f</div>
+        <div class="col-1" style="background-color:aqua;">g</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">h</div>
+        <div class="col-1" style="background-color:aqua;">i</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">j</div>
+        <div class="col-1" style="background-color:aqua;">k</div>
+        <div class="col-1" style="background-color:rgb(192,152,240)">l</div>
+      </div>
+      <div class="row"> <span>網格改col-2</span>
+        <div class="col-2" style="background-color:aqua;">a</div>
+        <div class="col-2" style="background-color:rgb(192,152,240);">b</div>
+        <div class="col-2" style="background-color:aqua;">c</div>
+        <div class="col-2" style="background-color:rgb(192,152,240)">d</div>
+        <div class="col-2" style="background-color:aqua;">e</div>
+        <div class="col-2" style="background-color:rgb(192,152,240)">f</div>
+      </div>
+      <div class="row"> <span>網格改col-4</span>
+        <div class="col-4" style="background-color:aqua;">a</div>
+        <div class="col-4" style="background-color:rgb(192,152,240);">b</div>
+        <div class="col-4" style="background-color:aqua;">c</div>
+      </div>
+      <div class="row"> <span>網格改col-3 col-md-6 平板排兩邊手機四個同一行</span>
+        <div class="col-3 col-md-6" style="background-color:aqua;">a</div>
+        <div class="col-3 col-md-6" style="background-color:rgb(192,152,240);">b</div>
+        <div class="col-3 col-md-6" style="background-color:aqua;">c</div>
+        <div class="col-3 col-md-6" style="background-color:rgb(192,152,240);">c</div>
+      </div>
+      <div class="row"> <span>網格改col-xl-6 col-md-3 col-sm-4 大螢幕兩邊平板不滿12會空一格小螢幕剛好占滿各一列</span>
+        <div class="col-xl-6 col-md-3 col-sm-4" style="background-color:aqua;">a</div>
+        <div class="col-xl-6 col-md-3 col-sm-4" style="background-color:rgb(192,152,240);">b</div>
+        <div class="col-xl-6 col-md-3 col-sm-4" style="background-color:aqua;">c</div>
+      </div>
+      <h3> col offset</h3>
+      <p>偏移欄通過 offset-*-* 類來設置。</p>
+      <div class="row"> <span>網格加上offset產生偏移效果，讓物件置中，大螢幕歸0中螢幕左3右3小螢幕左2右2</span>
+        <div class="col-xl-6 offset-xl-0 col-md-3 offset-md-3 col-sm-4 offset-sm-2" style="background-color:aqua;">a
+        </div>
+        <div class="col-xl-6 col-md-3 col-sm-4" style="background-color:rgb(192,152,240);">b</div>
+      </div>
+      <br>
+      <h2>間距</h2>
+      <p>Bootstrap 提供了簡單的間距工具類，可以快速設置元素的外邊距(margin)和內邊距(padding)</p>
+      <ul>
+        <li>m - 設定 margin 的外邊距</li>
+        <li>p - 設定 padding 的內邊距</li>
+        <li>t - top上方，設定 margin-top 或是 padding-top 的類別</li>
+        <li>b - buttom下方，設定 margin-bottom 或是 padding-bottom 的類別</li>
+        <li>s - 在 LTR(Left To Right) 設定 margin-left 或是 padding-left， RTL(Right To Left) 設定 margin-right 或是 padding-right
+        </li>
+        <li>x - 左右，同時設定 *-left 和 *-right</li>
+        <li>y - 上下，同時設定 *-top 和 *-bottom</li>
+        <li>空白 - 同時設定 margin 或 padding 在元素的四個邊緣</li>
+      </ul>
+      <p>數值範圍</p>
+      <ul>
+        <li>0 - 設定 margin 或是 padding 為 0</li>
+        <li>1 - (預設) 設定 margin 或是 padding 為 $spacer * .25</li>
+        <li>2 - (預設) 設定 margin 或是 padding 為 $spacer * .5</li>
+        <li>3 - (預設) 設定 margin 或是 padding 為 $spacer</li>
+        <li>4 - (預設) 設定 margin 或是 padding 為 $spacer * 1.5</li>
+        <li>5 - (預設) 設定 margin 或是 padding 為 $spacer * 3</li>
+      </ul>
+      <div class="row">
+        <div class="col-4 bg-primary text-white p-3 mt-3">內邊距 p-3，外邊距 mt-3</div>
+        <div class="col-4 bg-secondary text-white p-2 mt-2">內邊距 p-2，外邊距 mt-2</div>
+        <div class="col-4 bg-success text-white px-2 py-2 px-lg-5 mt-5">內邊距 p-5，外邊距 mt-5</div>
+      </div>
+      <br>
+      <h2>搭配斷點</h2>
+      <div class="row">
+        <div class="col-4 bg-primary text-white p-3 mt-3">內邊距 p-3，外邊距 mt-3</div>
+        <div class="col-4 bg-secondary text-white p-2 mt-2">內邊距 p-2，外邊距 mt-2</div>
+        <div class="col-4 bg-success text-white px-2 py-2 px-lg-5 mt-5">內邊距 p-5，外邊距 mt-5</div>
+      </div>
+      <h2 class="pt-2">Display</h2>
+      <p>文字大小可使用display來設置，範圍從display-1(最大)到display-6(最小)。</p>
+      <div class="row">
+        <div class="col-12 display-1 bg-warning py-3 text-center">
+          烏龍院
+        </div>
+      </div>
+      <h2 class="pt-2">Color</h2>
+      <p>Bootstrap提供了很多文字顏色類別，可以快速設置文字顏色</p>
+      <ul>
+        <li>“text-reset”繼承父層的</li>
+        <li>"text-muted"柔和的</li>
+        <li>"text-primary"重要的</li>
+        <li>“text-success”執行成功的</li>
+        <li>"text-info"提示資訊的</li>
+        <li>“text-warning”警告的</li>
+        <li>“text-danger”危險的</li>
+        <li>"text-secondary"副標題</li>
+        <li>"text-dark"深灰色</li>
+        <li>“text-light”淺灰色</li>
+        <li>"text-white"白色</li>
+      </ul>
+      <table class="table table-responsive-sm table-striped border-info">
+        <tr>
+          <td>“text-reset”繼承父層的</td>
+          <td>"text-muted"柔和的</td>
+          <td>"text-primary"重要的</td>
+        </tr>
+        <tr>
+          <td>“text-success”執行成功的</td>
+          <td>"text-info"提示資訊的</td>
+          <td>“text-warning”警告的</td>
+        </tr>
+      </table>
+      <table class="table table-responsive-sm table-striped border-danger-subtle">
+        <tr>
+          <td class="text-nowrap">“text-reset”繼承父層的</td>
+          <td class="text-nowrap">"text-muted"柔和的</td>
+          <td class="text-nowrap">"text-primary"重要的</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap">“text-success”執行成功的</td>
+          <td class="text-nowrap">"text-info"提示資訊的</td>
+          <td class="text-nowrap">“text-warning”警告的</td>
+        </tr>
+      </table>
+    </div>
+    <h2>圖片</h2>
+    <p>使用 .img-fluld 類別可以讓圖片在不同裝置上自動調整大小</p>
+  </section>
 
 
 
-    
-  
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 
 </body>
