@@ -30,6 +30,14 @@
             transition: transform 0.3s ease;
         }
 
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            z-index: 2000;
+        }
+
         /* 手機板和平板調整 */
         @media (max-width: 1024px) {
             #s5 img {
@@ -37,24 +45,23 @@
                 /* 作品圖片手機和平板全寬 */
             }
         }
-        
+
         /* 回到頂部按鈕平板調整 */
-        
-        @media (min-width: 768px) and (max-width: 1024px) {
+
+        @media (min-width: 576px) and (max-width: 991.98px) {
             #back-to-top {
-                bottom: 15px;
-                right: 15px;
-                font-size: 14px;
-                padding: 10px 15px;
+                bottom: 30px;
+                right: 20px;
             }
         }
-         @media(min-width: 393px)and(max-width:768px){
+
+        /* 手機（一定最後）*/
+        @media (max-width: 575.98px) {
             #back-to-top {
-                bottom:40px;
-                right:15px;
-                font-size:14px;
-                padding:10px 14px;
-                z-index:2000;
+                bottom: 80px;
+                right: 15px;
+                font-size: 14px;
+                padding: 10px 14px;
             }
         }
     </style>
@@ -325,8 +332,8 @@
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="col-md-6 py-5 text-center">
-                        <img style="width:100%; max-width:600px; height:400px;" src="images/20241130七皓房LOGO說明.jpg" alt="7-discription"
-                            class="img-fluid d-block mx-auto">
+                        <img style="width:100%; max-width:600px; height:400px;" src="images/20241130七皓房LOGO說明.jpg"
+                            alt="7-discription" class="img-fluid d-block mx-auto">
                     </div>
                     <div class="col-md-6 py-5 pb-5 text-center">
                         <img style="width:100%; max-width:600px; height:400px;" src="images/0815LOGO.png" alt="logo"
@@ -390,7 +397,7 @@
     </footer>
 
     <!-- 回到頂部按鈕 -->
-    <button id="back-to-top" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;">↑ 回到頂部</button>
+    <button id="back-to-top" class="btn btn-primary">↑ 回到頂部</button>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
